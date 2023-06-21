@@ -38,7 +38,7 @@ const Score = (props) => {
   return (
     <>
       <h1 className="text-center myText">Score Board</h1>
-      <div className="d-inline-flex myflex gap-4 flex-wrap flex-column p-4 justify-content-center text-white rounded-5">
+      <div className="d-inline-flex myflex gap-4 flex-wrap flex-column p-3 justify-content-center text-white rounded-5">
         {props.textVisible === false ? (
           <p>
             Runs : {props.runs}{" "}
@@ -47,7 +47,7 @@ const Score = (props) => {
               onClick={runEditHandler}
             >
               {" "}
-              Edit <FontAwesomeIcon icon={faPenToSquare} />
+               <FontAwesomeIcon icon={faPenToSquare} />
             </button>{" "}
           </p>
         ) : (
@@ -74,7 +74,7 @@ const Score = (props) => {
         <p>
           Wickets : {props.wickets}{" "}
           <button className="btn btn-sm btn btn-info rounded-4 text-white" onClick={wicketEditHandler}>
-            Edit <FontAwesomeIcon icon={faPenToSquare} />
+             <FontAwesomeIcon icon={faPenToSquare} />
           </button>
         </p> :
  <p>
@@ -102,7 +102,7 @@ const Score = (props) => {
         
           Overs : {props.overs}{" "}
           <button className="btn btn-sm btn btn-info rounded-4 text-white"  onClick={oversEditHandler}>
-            Edit <FontAwesomeIcon icon={faPenToSquare}/>
+             <FontAwesomeIcon icon={faPenToSquare}/>
           </button>
         </p>: 
         
