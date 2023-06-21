@@ -18,9 +18,9 @@ const TimeLine = (props) => {
 <>
 
 <hr className="py-3" />
-    <h1 className="text-center  mt-4">Bowler Timeline</h1> 
+    <h2 className="text-center  mt-4">Bowler Timeline</h2> 
 
-    <h3 className="text-center  mt-4">This over</h3> 
+    <h4 className="text-center  mt-4">This over</h4> 
    
     {props.timelineVal!==""? 
    <div className="d-inline-flex  flex-wrap  p-2 justify-content-center align-items-center text-black rounded-5">
