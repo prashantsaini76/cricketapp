@@ -1,6 +1,7 @@
 import RunButtons from "./Components/RunButtons";
 import { useState } from "react";
 import Footer from "./Components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [runs, setruns] = useState(0);
@@ -425,6 +426,12 @@ function App() {
 
   return (
     <>
+
+<Router>
+<Routes>
+
+  <Route exact path ="/cricketapp"
+  element={ 
       <RunButtons
         click0={click0}
         click1={click1}
@@ -463,7 +470,11 @@ function App() {
         timelineVal={timelineVal}
         undo={undo}
        
-      />
+      /> } />
+
+     
+      </Routes>
+      </Router>
 
       <Footer/>
      
