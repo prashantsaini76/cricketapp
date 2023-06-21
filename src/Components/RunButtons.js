@@ -121,10 +121,10 @@ const clickNB0Handler = () => {
 
   return (
     <div className="container mt-4 py-4 text-center mycontainer rounded-4">
-      {props.wideBall===null ? <><h1>Cricket Score Tracker</h1>
+     <h1>Cricket Score Tracker</h1>
       <img src={logo} alt="Logo" className="logoimg" />
      
-     
+      {props.wideBall===null ? <>
      <h5 className="py-4">Will you get runs on a wide ball? <button className="btn btn-sm btn-success" onClick={yesClickHandler}><FontAwesomeIcon icon={faCircleCheck}/></button><button className="btn btn-sm btn-danger" onClick={noClickHandler}><FontAwesomeIcon icon={faCircleXmark}/></button></h5>
      </>: <>
      
