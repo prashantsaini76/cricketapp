@@ -1,0 +1,27 @@
+.mycontainer{
+    background-color: #F4F9F9;
+}
+
+h1{
+
+   
+    font-family: 'Macondo', cursive;
+     font-size:50px;
+   
+}
+
+h3{
+
+   
+    font-family: 'Macondo', cursive;
+
+    font-size: 35px;
+     
+   
+}
+
+.logoimg{
+
+    height: 150px;
+    border-radius: 100%;
+}
