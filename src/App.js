@@ -7,8 +7,9 @@ function App() {
   const [runs, setruns] = useState(0);
   const [wickets, setWickets] = useState(0);
   const [overs, setOvers] = useState("0.0");
-  
- let prevTimelineVal; 
+
+  const[wideBall, setWideBall]= useState(null); 
+ 
   const [textVisible, setTextVisible] = useState(false);
 
   const [WicketTextVisible, setWicketTextVisible] = useState(false);
@@ -69,7 +70,7 @@ function App() {
     }
     setruns(parseInt(runs) + 1);
     setTimelineVal(timelineVal+" "+"1"); 
-    prevTimelineVal=timelineVal; 
+    
   };
 
   
@@ -189,7 +190,9 @@ function App() {
   };
 
   const clickWD = () => {
-    setruns(parseInt(runs) + 1);
+
+    if(wideBall===true){
+    setruns(parseInt(runs) + 1);}
     setTimelineVal(timelineVal+" "+"Wide"); 
   };
 
@@ -219,6 +222,22 @@ function App() {
     setTimelineVal(timelineVal+" "+"NB+Runout+3R"); 
   };
 
+
+
+  const clean = () =>{
+
+    setTimelineVal("");
+  }
+
+  const clearScore = () =>{
+
+    setruns(0);
+    setWickets(0);
+    setOvers("0.0")
+  } 
+
+  const clickYes = () =>{setWideBall(true)} 
+  const clickNo = () =>{setWideBall(false)}
 
   const undo=()=>{
 
@@ -326,6 +345,7 @@ function App() {
 
     else if (timelineVal.endsWith("Wide")){
      
+      if(wideBall===true)
       setruns(parseInt(runs) - 1); 
       setTimelineVal(timelineVal.substring(0,timelineVal.length-5)); 
 
@@ -469,6 +489,11 @@ function App() {
         overs={overs}
         timelineVal={timelineVal}
         undo={undo}
+        clean={clean}
+        clearScore={clearScore}
+        clickYes={clickYes}
+        clickNo={clickNo}
+        wideBall={wideBall}
        
       /> } />
 

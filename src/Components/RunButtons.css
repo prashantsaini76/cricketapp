@@ -20,8 +20,21 @@ h3{
    
 }
 
+h5{
+
+   
+    font-family: 'Macondo', cursive;
+
+    font-size: 18px;
+
+    align-items: center;
+     
+   
+}
+
 .logoimg{
 
     height: 100px;
     border-radius: 100%;
 }
+

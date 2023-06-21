@@ -1,7 +1,7 @@
 import React from 'react'
 import './TimeLine.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRotateLeft, faBroom } from "@fortawesome/free-solid-svg-icons";
 
 const TimeLine = (props) => {
 
@@ -14,6 +14,10 @@ const TimeLine = (props) => {
 
     props.undo();
   }
+
+  const cleanHandler = () =>{
+          props.clean();
+  } 
   return (
 <>
 
@@ -25,7 +29,7 @@ const TimeLine = (props) => {
     {props.timelineVal!==""? 
    <div className="d-inline-flex  flex-wrap  p-2 justify-content-center align-items-center text-black rounded-5">
   
-       <p>{props.timelineVal} <button className='btn btn-sm btn-primary' onClick={undoHandler}> <FontAwesomeIcon icon={faArrowRotateLeft}/></button> </p>   
+       <p>{props.timelineVal} <button className='btn btn-sm btn-primary' onClick={undoHandler}> <FontAwesomeIcon icon={faArrowRotateLeft}/></button>{" "}<button className='btn btn-sm btn-warning' onClick={cleanHandler}> <FontAwesomeIcon icon={faBroom}/></button> </p>   
       
 
       </div>: ""} 

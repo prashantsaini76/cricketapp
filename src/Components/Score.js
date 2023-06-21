@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { faPenToSquare, faBroom } from "@fortawesome/free-solid-svg-icons";
 import "./Score.css";
 import TimeLine from "./TimeLine"; 
 
@@ -35,9 +35,19 @@ const Score = (props) => {
     props.oversText(e.target.value); 
   };
 
+  const clearScoreHandler = () => { 
+   props.clearScore();
+  };
+
   return (
     <>
-      <h1 className="text-center myText">Score Board</h1>
+      <h1 className="text-center myText">Score Board  <button
+              className="btn btn-sm btn-info  text-white"
+              onClick={clearScoreHandler}
+            >
+              {"Clear Score "}
+               <FontAwesomeIcon icon={faBroom} />
+            </button>  </h1>
       <div className="d-inline-flex myflex gap-4 flex-wrap flex-column p-3 justify-content-center text-white rounded-5">
         {props.textVisible === false ? (
           <p>
@@ -129,7 +139,7 @@ const Score = (props) => {
       </div> 
 
 
-      <TimeLine timelineVal={props.timelineVal} undo={props.undo}/> 
+      <TimeLine timelineVal={props.timelineVal} undo={props.undo} clean={props.clean}/> 
     </>
  
     

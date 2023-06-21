@@ -3,6 +3,9 @@ import Score from "./Score";
 import "./RunButtons.css";
 import logo from "../logo.jpg";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark,faCircleCheck} from "@fortawesome/free-solid-svg-icons";
+
 const RunButtons = (props) => {
 
 
@@ -104,10 +107,27 @@ const clickNB0Handler = () => {
     props.clickNBrunout3(); 
   }
 
+  const yesClickHandler = () =>{
+
+    props.clickYes();
+
+  }
+
+  const noClickHandler = () =>{
+
+    props.clickNo(); 
+
+  }
+
   return (
     <div className="container mt-4 py-4 text-center mycontainer rounded-4">
       <h1>Cricket Score Tracker</h1>
       <img src={logo} alt="Logo" className="logoimg" />
+     
+     
+     {props.wideBall===null ? <h5 className="py-4">Will you get runs on a wide ball? <button className="btn btn-sm btn-success" onClick={yesClickHandler}><FontAwesomeIcon icon={faCircleCheck}/></button><button className="btn btn-sm btn-danger" onClick={noClickHandler}><FontAwesomeIcon icon={faCircleXmark}/></button></h5>:""}
+     
+     
       <h3 className="py-4">Select what happened on current delivery</h3>
       <div className="d-inline-flex flex-wrap p-3 gap-2 justify-content-center bg-dark rounded-5">
         <button
@@ -174,6 +194,8 @@ const clickNB0Handler = () => {
         oversText={props.oversText} 
         timelineVal={props.timelineVal}
         undo={props.undo}
+        clean={props.clean}
+        clearScore={props.clearScore}
 
 
       />
