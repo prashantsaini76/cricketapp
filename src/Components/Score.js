@@ -38,7 +38,7 @@ const Score = (props) => {
   return (
     <>
       <h1 className="text-center myText">Score Board</h1>
-      <div className="d-inline-flex myflex gap-4 flex-wrap flex-row p-4 justify-content-center text-white rounded-5">
+      <div className="d-inline-flex myflex gap-4 flex-wrap flex-column p-4 justify-content-center text-white rounded-5">
         {props.textVisible === false ? (
           <p>
             Runs : {props.runs}{" "}
