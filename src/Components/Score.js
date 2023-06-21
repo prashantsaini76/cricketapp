@@ -45,7 +45,7 @@ const Score = (props) => {
               className="btn btn-sm btn-info  text-white"
               onClick={clearScoreHandler}
             >
-              {"Clear Score "}
+              {"  "}
                <FontAwesomeIcon icon={faBroom} />
             </button>  </h1>
       <div className="d-inline-flex myflex gap-4 flex-wrap flex-column p-3 justify-content-center text-white rounded-5">
