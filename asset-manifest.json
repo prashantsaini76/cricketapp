@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cricket-score-app/static/css/main.d803ffec.css",
+    "main.js": "/cricket-score-app/static/js/main.f7930c99.js",
+    "static/media/logo.jpg": "/cricket-score-app/static/media/logo.bd87585e0e34139efd8a.jpg",
+    "index.html": "/cricket-score-app/index.html",
+    "main.d803ffec.css.map": "/cricket-score-app/static/css/main.d803ffec.css.map",
+    "main.f7930c99.js.map": "/cricket-score-app/static/js/main.f7930c99.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d803ffec.css",
+    "static/js/main.f7930c99.js"
+  ]
+}
