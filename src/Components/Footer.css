@@ -1,0 +1,14 @@
+.footer {
+   
+    text-align: center;
+    color: white;
+    font-family: 'Macondo', cursive;
+    
+   
+  }
+
+
+  .myfooter{
+    position: sticky;
+   top: 100%;
+  }

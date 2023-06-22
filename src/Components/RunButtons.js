@@ -2,9 +2,9 @@ import React from "react";
 import Score from "./Score";
 import "./RunButtons.css";
 import logo from "../logo.jpg";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark,faCircleCheck} from "@fortawesome/free-solid-svg-icons";
+import Footer from "./Footer";
 
 const RunButtons = (props) => {
 
@@ -120,12 +120,12 @@ const clickNB0Handler = () => {
   }
 
   return (
-    <div className="container mt-4 py-4 text-center mycontainer rounded-4">
+    <div className="container py-4 text-center mycontainer">
      <h1>Cricket Score Tracker</h1>
       <img src={logo} alt="Logo" className="logoimg" />
      
       {props.wideBall===null ? <>
-     <h5 className="py-4">Will you get runs on a wide ball? <button className="btn btn-sm btn-success" onClick={yesClickHandler}><FontAwesomeIcon icon={faCircleCheck}/></button><button className="btn btn-sm btn-danger" onClick={noClickHandler}><FontAwesomeIcon icon={faCircleXmark}/></button></h5>
+     <h5 className="py-4">Will you get runs on a wide ball? <button className="btn btn-lg btn-success" onClick={yesClickHandler}><FontAwesomeIcon icon={faCircleCheck}/></button>{"   "}<button className="btn btn-lg btn-danger" onClick={noClickHandler}><FontAwesomeIcon icon={faCircleXmark}/></button></h5>
      </>: <>
      
       <h3 className="py-4">Select what happened on current delivery</h3>
@@ -196,9 +196,15 @@ const clickNB0Handler = () => {
         undo={props.undo}
         clean={props.clean}
         clearScore={props.clearScore}
+        editFlag={props.editFlag}
+        editScore={props.editScore}
+        CancelEdit={props.CancelEdit}
 
 
       /></>}
+
+
+<Footer/>
      
     </div>
   );

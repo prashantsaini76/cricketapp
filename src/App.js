@@ -3,10 +3,12 @@ import { useState } from "react";
 import Footer from "./Components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+
 function App() {
   const [runs, setruns] = useState(0);
   const [wickets, setWickets] = useState(0);
   const [overs, setOvers] = useState("0.0");
+  const [editFlag, setEditFlag]=useState(false); 
 
   const[wideBall, setWideBall]= useState(null); 
  
@@ -18,23 +20,50 @@ function App() {
 
   const [timelineVal, setTimelineVal] = useState("");
 
+  
+
+
+  const editScore = () =>{
+    setEditFlag(true);
+  }
+
+
+
+  
   const runText = (runvalue) => {
+
+   
     setruns(runvalue);
   };
 
   const wicketText = (wicketVal) => {
+   
     setWickets(wicketVal);
   };
 
   const oversText = (oversVal) => {
+    
     setOvers(oversVal);
   };
+  
 
   const done = () => {
+   
     setTextVisible(false);
     setWicketTextVisible(false);
     setOversTextVisible(false);
+    setEditFlag(false); 
+
+
+
+
+    
   };
+
+  const CancelEdit = () => {
+    setEditFlag(false);
+   
+  }
 
   const runEdit = () => {
     setTextVisible(true);
@@ -452,6 +481,8 @@ function App() {
 
   <Route exact path ="/cricketapp"
   element={ 
+
+ 
       <RunButtons
         click0={click0}
         click1={click1}
@@ -494,12 +525,17 @@ function App() {
         clickYes={clickYes}
         clickNo={clickNo}
         wideBall={wideBall}
+        editFlag={editFlag}
+        editScore={editScore}
+        CancelEdit={CancelEdit}
        
       /> } />
 
      
       </Routes>
-      <Footer/>
+     
+     
+     
       </Router>
 
       

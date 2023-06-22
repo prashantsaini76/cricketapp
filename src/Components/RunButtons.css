@@ -1,12 +1,17 @@
 .mycontainer{
-    background-color: #F4F9F9;
+     
+    min-height: 100vh;
+    background-image: url('../bg.jpg');
+  
 }
 
 h1{
 
    
     font-family: 'Macondo', cursive;
-     font-size:30px;
+    font-size:50px;
+    font-weight: 100;
+    color: white;
    
 }
 
@@ -16,6 +21,8 @@ h3{
     font-family: 'Macondo', cursive;
 
     font-size: 25px;
+
+    color: white;
      
    
 }
@@ -25,16 +32,18 @@ h5{
    
     font-family: 'Macondo', cursive;
 
-    font-size: 18px;
+    font-size: 25px;
 
     align-items: center;
+
+    color: white;
      
    
 }
 
 .logoimg{
 
-    height: 100px;
+    height: 150px;
     border-radius: 100%;
 }
 

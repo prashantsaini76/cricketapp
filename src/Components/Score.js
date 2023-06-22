@@ -1,14 +1,22 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPenToSquare, faBroom } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPenToSquare,
+  faBroom,
+  faArrowRotateLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Score.css";
-import TimeLine from "./TimeLine"; 
+
 
 const Score = (props) => {
- 
+
+
+  
+
 
   const doneHandler = () => {
-    props.done(props.runs);
+    props.done();
+    
   };
 
   const runEditHandler = () => {
@@ -28,122 +36,119 @@ const Score = (props) => {
   };
 
   const wickettextHandler = (e) => {
-    props.wicketText(e.target.value); 
+    props.wicketText(e.target.value);
   };
 
   const oversTextHandler = (e) => {
-    props.oversText(e.target.value); 
+    props.oversText(e.target.value);
   };
 
-  const clearScoreHandler = () => { 
-   props.clearScore();
+  const clearScoreHandler = () => {
+    props.clearScore();
+  };
+
+  const editScoreHandler = () => {
+   props.editScore();
+  };
+
+  
+
+  const CancelEditHandler = () =>{
+    props.CancelEdit();
+  }
+
+  const undoHandler = () => {
+    props.undo();
+  };
+
+  const cleanHandler = () => {
+    props.clean();
   };
 
   return (
+
+
+   
     <>
-      <h1 className="text-center myText">Score Board  <button
-              className="btn btn-sm btn-info  text-white"
-              onClick={clearScoreHandler}
-            >
-              {"  "}
-               <FontAwesomeIcon icon={faBroom} />
-            </button>  </h1>
-      <div className="d-inline-flex myflex gap-4 flex-wrap flex-column p-3 justify-content-center text-white rounded-5">
-        {props.textVisible === false ? (
-          <p>
-            Runs : {props.runs}{" "}
-            <button
-              className="btn btn-sm btn-info rounded-4 text-white"
-              onClick={runEditHandler}
-            >
-              {" "}
-               <FontAwesomeIcon icon={faPenToSquare} />
-            </button>{" "}
-          </p>
-        ) : (
-          <p>
-            Runs :{" "}
-            <input
-              type="text"
-              value={props.runs}
-              placeholder="enter runs"
-              className="form-control text-center"
-              onChange={runtextHandler}
-            />
-            <button
-              className="btn btn-sm btn-info rounded-4 text-white"
-              onClick={doneHandler}
-            >
-              Done
-            </button>{" "}
-          </p>
-        )}
-
-
-{props.WicketTextVisible === false ? 
-        <p>
-          Wickets : {props.wickets}{" "}
-          <button className="btn btn-sm btn btn-info rounded-4 text-white" onClick={wicketEditHandler}>
-             <FontAwesomeIcon icon={faPenToSquare} />
-          </button>
-        </p> :
- <p>
- Wickets :{" "}
- <input
-   type="text"
-   value={props.wickets}
-   placeholder="enter wickets"
-   className="form-control text-center"
-   onChange={wickettextHandler}
- />
- <button
-   className="btn btn-sm btn-info rounded-4 text-white"
-   onClick={doneHandler}
- >
-   Done
- </button>{" "}
-</p>}  
-
-
-
-
-
-{props.oversTextVisible===false ? <p>
-        
-          Overs : {props.overs}{" "}
-          <button className="btn btn-sm btn btn-info rounded-4 text-white"  onClick={oversEditHandler}>
-             <FontAwesomeIcon icon={faPenToSquare}/>
-          </button>
-        </p>: 
-        
-        
-        <p>
-        
-          Overs :{" "}<input
-   type="text"
-   value={props.overs}
-   placeholder="enter overs"
-   className="form-control text-center"
-   onChange={oversTextHandler}
- />
+     {props.editFlag === false ? (
+      <>
+      <h1 className="text-center myText">
+        Score Board{" "}
+        <p className="my-4 mb-4">
+          {" "}
           <button
-   className="btn btn-sm btn-info rounded-4 text-white"
-   onClick={doneHandler}
- >
-   Done
- </button>{" "}
+            className="btn btn-sm btn-success text-white"
+            onClick={clearScoreHandler}>
+            {" "}
+            <FontAwesomeIcon icon={faBroom} />
+          </button>{" "}
+          Clear Score Board{" "}
+          <button
+            className="btn btn-sm btn-primary  text-white"
+            onClick={editScoreHandler} >
+            {" "}
+            <FontAwesomeIcon icon={faPenToSquare} />
+          </button>{" "}
+          Edit Score Board
         </p>
-        
-        
-        }
-      </div> 
+      </h1>
+      <div className="bg-warning p-2 border border-dark rounded-1 justify-content-left d-inline-flex">
+        {" "}
+        <p>
+          Score {props.runs}
+          {"-"}
+          {props.wickets}
+          {" ["}
+          {props.overs}
+          {" Overs"}
+          {"]"}
+        </p>
+      </div>{" "}
+      {props.timelineVal !== "" ? (
+        <>
+          <div className="bg-info p-2 mt-2 rounded-1 border border-dark text-white justify-content-left d-inline-flex">
+            {" "}
+            <p>
+              {"Bowler Timeline |"} {props.timelineVal}
+            </p>
+          </div>
 
+          <div className=" p-2 mt-2 rounded-4 text-white justify-content-left d-inline-flex">
+            {" "}
+            <p>
+              <button className="btn btn-sm btn-primary" onClick={undoHandler}>
+                {" "}
+                <FontAwesomeIcon icon={faArrowRotateLeft} />
+              </button>
+              {" Undo "}
+              <button className="btn btn-sm btn-warning" onClick={cleanHandler}>
+                {" "}
+                <FontAwesomeIcon icon={faBroom} />
+              </button>
+              {" Clear Timeline "}
+            </p>
+          </div>
+        </>
+      ) : (
+        ""
+      )}
 
-      <TimeLine timelineVal={props.timelineVal} undo={props.undo} clean={props.clean}/> 
-    </>
- 
+     
+    </> ) : 
     
-  );
-};
+    <>
+    <h1 className="text-center myText mb-4">Edit Score Board</h1>
+    <div className="d-inline-flex gap-3 flex-row p-4 bg-dark text-white rounded-4 myTextChild">
+   Runs<input class="form-control" type="number" value={props.runs} onChange={runtextHandler}></input>
+   Overs<input class="form-control" type="number" value={props.overs} onChange={oversTextHandler}></input>
+  Wickets<input class="form-control" type="number" value={props.wickets} onChange={wickettextHandler}></input>
+    <button className="btn  btn-success" onClick={doneHandler}>Save</button>
+   
+    </div>
+    </>
+    
+    }</>
+  )
+}
 
 export default Score;
