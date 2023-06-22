@@ -1,26 +1,22 @@
 p {
-    font-family: 'Exo 2', sans-serif;
-   
-    font-size: 20px;
+  font-family: "Exo 2", sans-serif;
 
-   
+  font-size: 20px;
 }
 
 .myflex {
-
-   background-color: black;
+  background-color: black;
 }
 
-.myText{
-    font-family: 'Macondo', cursive;
-    font-size:40px;
-    font-weight: 100;
-   
+.myText {
+  font-family: "Macondo", cursive;
+  font-size: 40px;
+  font-weight: 100;
 }
 
-.myTextChild{
-    font-family: 'Macondo', cursive;
-    font-size:20px;
-    font-weight: 100;
-    width: 300px;
+.myTextChild {
+  font-family: "Macondo", cursive;
+  font-size: 20px;
+  font-weight: 100;
+  width: 300px;
 }

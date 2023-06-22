@@ -3,13 +3,14 @@ import Score from "./Score";
 import "./RunButtons.css";
 import logo from "../logo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark,faCircleCheck} from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleXmark,
+  faCircleCheck,
+} from "@fortawesome/free-solid-svg-icons";
 import Footer from "./Footer";
 
 const RunButtons = (props) => {
-
-
-    // CLICK HANDLERS FOR 0 TO 6 RUNS
+  // CLICK HANDLERS FOR 0 TO 6 RUNS
   const click0Handler = () => {
     props.click0();
   };
@@ -34,13 +35,11 @@ const RunButtons = (props) => {
     props.click6();
   };
 
+  //CLICK HANDLERS FOR NO BALLS
 
-//CLICK HANDLERS FOR NO BALLS
-
-const clickNB0Handler = () => {
+  const clickNB0Handler = () => {
     props.clickNB0();
   };
-
 
   const clickNB1Handler = () => {
     props.clickNB1();
@@ -61,12 +60,12 @@ const clickNB0Handler = () => {
   const clickNB6Handler = () => {
     props.clickNB6();
   };
-  
+
   //CLICK HANDLER FOR WIDE
 
-  const clickWDHandler = () =>{
-    props.clickWD(); 
-  }
+  const clickWDHandler = () => {
+    props.clickWD();
+  };
 
   //CLICK HANDLERS FOR WICKET
   const clickout0Handler = () => {
@@ -87,127 +86,207 @@ const clickNB0Handler = () => {
 
   //CLICK HANDLER FOR NO BALL RUN OUT
 
-  const clickNBrunout0Handler = () =>{
-
+  const clickNBrunout0Handler = () => {
     props.clickNBrunout0();
-  }
+  };
 
-  const clickNBrunout1Handler = () =>{
-
+  const clickNBrunout1Handler = () => {
     props.clickNBrunout1();
-  }
+  };
 
-  const clickNBrunout2Handler = () =>{
-
+  const clickNBrunout2Handler = () => {
     props.clickNBrunout2();
-  }
+  };
 
-  const clickNBrunout3Handler = () =>{
+  const clickNBrunout3Handler = () => {
+    props.clickNBrunout3();
+  };
 
-    props.clickNBrunout3(); 
-  }
-
-  const yesClickHandler = () =>{
-
+  const yesClickHandler = () => {
     props.clickYes();
+  };
 
-  }
-
-  const noClickHandler = () =>{
-
-    props.clickNo(); 
-
-  }
+  const noClickHandler = () => {
+    props.clickNo();
+  };
 
   return (
     <div className="container py-4 text-center mycontainer">
-     <h1>Cricket Score Tracker</h1>
+      <h1>Cricket Score Tracker</h1>
       <img src={logo} alt="Logo" className="logoimg" />
-     
-      {props.wideBall===null ? <>
-     <h5 className="py-4">Will you get runs on a wide ball? </h5>
 
-     <button className="btn btn-md btn-success" onClick={yesClickHandler}>YES{" "}<FontAwesomeIcon icon={faCircleCheck}/></button>{"   "}<button className="btn btn-md btn-danger" onClick={noClickHandler}>NO{" "}<FontAwesomeIcon icon={faCircleXmark}/></button>
-     </>: <>
-     
-      <h3 className="py-4">Select what happened on current delivery</h3>
-      <div className="d-inline-flex flex-wrap p-3 gap-2 justify-content-center bg-dark rounded-5">
-        <button
-          className="btn btn-sm btn-success rounded-pill"
-          onClick={click0Handler}
-        >
-          0
-        </button>
-        <button
-          className="btn btn-sm btn-success rounded-pill"
-          onClick={() => {
-            click1Handler();
-          }}
-        >
-          1
-        </button>
-        <button className="btn btn-sm btn-success rounded-pill" onClick={click2Handler}>2</button>
-        <button className="btn btn-sm btn-success rounded-pill" onClick={click3Handler}>3</button>
-        <button className="btn btn-sm btn-success rounded-pill" onClick={click4Handler}>4</button>
-        <button className="btn btn-sm btn-success rounded-pill" onClick={click6Handler}>6</button>
-        <button className="btn btn-sm btn-warning rounded-pill" onClick={clickNB0Handler}>NB+0</button>
-        <button className="btn btn-sm btn-warning rounded-pill" onClick={clickNB1Handler}>NB+1</button>
-        <button className="btn btn-sm btn-warning rounded-pill" onClick={clickNB2Handler}>NB+2</button>
-        <button className="btn btn-sm btn-warning rounded-pill" onClick={clickNB3Handler}>NB+3</button>
-        <button className="btn btn-sm btn-warning rounded-pill" onClick={clickNB4Handler}>NB+4</button>
-        <button className="btn btn-sm btn-warning rounded-pill" onClick={clickNB6Handler}>NB+6</button>
-        <button className="btn btn-sm btn-primary rounded-pill" onClick={clickWDHandler}>WIDE</button>
-        <button
-          className="btn btn-sm btn-danger rounded-pill"
-          onClick={clickout0Handler}
-        >
-          OUT+0
-        </button>
-        <button className="btn btn-sm btn-danger rounded-pill" onClick={clickout1Handler}>OUT+1</button>
-        <button className="btn btn-sm btn-danger rounded-pill" onClick={clickout2Handler}>OUT+2</button>
-        <button className="btn btn-sm btn-danger rounded-pill" onClick={clickout3Handler}>OUT+3</button>
-        <button className="btn btn-sm btn-danger rounded-pill" onClick={clickNBrunout0Handler}>
-          NB+RUNOUT+0
-        </button>
-        <button className="btn btn-sm btn-danger rounded-pill"  onClick={clickNBrunout1Handler}>
-          NB+RUNOUT+1
-        </button>
-        <button className="btn btn-sm btn-danger rounded-pill" onClick={clickNBrunout2Handler}>
-          NB+RUNOUT+2
-        </button>
-        <button className="btn btn-sm btn-danger rounded-pill " onClick={clickNBrunout3Handler}>
-          NB+RUNOUT+3
-        </button>
-      </div>
-      <hr className="py-3" />
-      <Score
-        runs={props.runs}
-        wickets={props.wickets}
-        overs={props.overs}
-        runEdit={props.runEdit}
-        wicketEdit={props.wicketEdit}
-        oversEdit={props.oversEdit}
-        textVisible={props.textVisible}
-        done={props.done}
-        runText={props.runText}
-        WicketTextVisible={props.WicketTextVisible}
-        oversTextVisible={props.oversTextVisible}
-        wicketText={props.wicketText}
-        oversText={props.oversText} 
-        timelineVal={props.timelineVal}
-        undo={props.undo}
-        clean={props.clean}
-        clearScore={props.clearScore}
-        editFlag={props.editFlag}
-        editScore={props.editScore}
-        CancelEdit={props.CancelEdit}
+      {props.wideBall === null ? (
+        <>
+          <h5 className="py-4">Will you get runs on a wide ball? </h5>
 
+          <button className="btn btn-md btn-success" onClick={yesClickHandler}>
+            YES <FontAwesomeIcon icon={faCircleCheck} />
+          </button>
+          {"   "}
+          <button className="btn btn-md btn-danger" onClick={noClickHandler}>
+            NO <FontAwesomeIcon icon={faCircleXmark} />
+          </button>
+        </>
+      ) : (
+        <>
+          <h3 className="py-4">Select what happened on current delivery</h3>
+          <div className="d-inline-flex flex-wrap p-3 gap-2 justify-content-center bg-dark rounded-5">
+            <button
+              className="btn btn-sm btn-success rounded-pill"
+              onClick={click0Handler}
+            >
+              0
+            </button>
+            <button
+              className="btn btn-sm btn-success rounded-pill"
+              onClick={() => {
+                click1Handler();
+              }}
+            >
+              1
+            </button>
+            <button
+              className="btn btn-sm btn-success rounded-pill"
+              onClick={click2Handler}
+            >
+              2
+            </button>
+            <button
+              className="btn btn-sm btn-success rounded-pill"
+              onClick={click3Handler}
+            >
+              3
+            </button>
+            <button
+              className="btn btn-sm btn-success rounded-pill"
+              onClick={click4Handler}
+            >
+              4
+            </button>
+            <button
+              className="btn btn-sm btn-success rounded-pill"
+              onClick={click6Handler}
+            >
+              6
+            </button>
+            <button
+              className="btn btn-sm btn-warning rounded-pill"
+              onClick={clickNB0Handler}
+            >
+              NB+0
+            </button>
+            <button
+              className="btn btn-sm btn-warning rounded-pill"
+              onClick={clickNB1Handler}
+            >
+              NB+1
+            </button>
+            <button
+              className="btn btn-sm btn-warning rounded-pill"
+              onClick={clickNB2Handler}
+            >
+              NB+2
+            </button>
+            <button
+              className="btn btn-sm btn-warning rounded-pill"
+              onClick={clickNB3Handler}
+            >
+              NB+3
+            </button>
+            <button
+              className="btn btn-sm btn-warning rounded-pill"
+              onClick={clickNB4Handler}
+            >
+              NB+4
+            </button>
+            <button
+              className="btn btn-sm btn-warning rounded-pill"
+              onClick={clickNB6Handler}
+            >
+              NB+6
+            </button>
+            <button
+              className="btn btn-sm btn-primary rounded-pill"
+              onClick={clickWDHandler}
+            >
+              WIDE
+            </button>
+            <button
+              className="btn btn-sm btn-danger rounded-pill"
+              onClick={clickout0Handler}
+            >
+              OUT+0
+            </button>
+            <button
+              className="btn btn-sm btn-danger rounded-pill"
+              onClick={clickout1Handler}
+            >
+              OUT+1
+            </button>
+            <button
+              className="btn btn-sm btn-danger rounded-pill"
+              onClick={clickout2Handler}
+            >
+              OUT+2
+            </button>
+            <button
+              className="btn btn-sm btn-danger rounded-pill"
+              onClick={clickout3Handler}
+            >
+              OUT+3
+            </button>
+            <button
+              className="btn btn-sm btn-danger rounded-pill"
+              onClick={clickNBrunout0Handler}
+            >
+              NB+RUNOUT+0
+            </button>
+            <button
+              className="btn btn-sm btn-danger rounded-pill"
+              onClick={clickNBrunout1Handler}
+            >
+              NB+RUNOUT+1
+            </button>
+            <button
+              className="btn btn-sm btn-danger rounded-pill"
+              onClick={clickNBrunout2Handler}
+            >
+              NB+RUNOUT+2
+            </button>
+            <button
+              className="btn btn-sm btn-danger rounded-pill "
+              onClick={clickNBrunout3Handler}
+            >
+              NB+RUNOUT+3
+            </button>
+          </div>
+          <hr className="py-3" />
+          <Score
+            runs={props.runs}
+            wickets={props.wickets}
+            overs={props.overs}
+            runEdit={props.runEdit}
+            wicketEdit={props.wicketEdit}
+            oversEdit={props.oversEdit}
+            textVisible={props.textVisible}
+            done={props.done}
+            runText={props.runText}
+            WicketTextVisible={props.WicketTextVisible}
+            oversTextVisible={props.oversTextVisible}
+            wicketText={props.wicketText}
+            oversText={props.oversText}
+            timelineVal={props.timelineVal}
+            undo={props.undo}
+            clean={props.clean}
+            clearScore={props.clearScore}
+            editFlag={props.editFlag}
+            editScore={props.editScore}
+            CancelEdit={props.CancelEdit}
+          />
+        </>
+      )}
 
-      /></>}
-
-
-<Footer/>
-     
+      <Footer />
     </div>
   );
 };

@@ -1,15 +1,11 @@
 .footer {
-   
-    text-align: center;
-    color: white;
-    font-family: 'Macondo', cursive;
-    font-size: 15px;
-    
-   
-  }
+  text-align: center;
+  color: white;
+  font-family: "Macondo", cursive;
+  font-size: 15px;
+}
 
-
-  .myfooter{
-    position: sticky;
-   top: 100%;
-  }
+.myfooter {
+  position: sticky;
+  top: 100%;
+}
