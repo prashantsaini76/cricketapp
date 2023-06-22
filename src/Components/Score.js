@@ -138,11 +138,11 @@ const Score = (props) => {
     
     <>
     <h1 className="text-center myText mb-4">Edit Score Board</h1>
-    <div className="d-inline-flex gap-3 flex-row p-4 bg-dark text-white rounded-4 myTextChild">
+    <div className="d-inline-flex gap-1 p-2 bg-dark text-white justify-content-center flex-wrap rounded-4 myTextChild">
    Runs<input class="form-control" type="number" value={props.runs} onChange={runtextHandler}></input>
    Overs<input class="form-control" type="number" value={props.overs} onChange={oversTextHandler}></input>
   Wickets<input class="form-control" type="number" value={props.wickets} onChange={wickettextHandler}></input>
-    <button className="btn  btn-success" onClick={doneHandler}>Save</button>
+    <button className="btn mt-1 btn-success" onClick={doneHandler}>Save</button>
    
     </div>
     </>
