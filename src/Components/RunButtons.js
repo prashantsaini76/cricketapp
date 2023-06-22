@@ -125,7 +125,9 @@ const clickNB0Handler = () => {
       <img src={logo} alt="Logo" className="logoimg" />
      
       {props.wideBall===null ? <>
-     <h5 className="py-4">Will you get runs on a wide ball? <button className="btn btn-md btn-success" onClick={yesClickHandler}><FontAwesomeIcon icon={faCircleCheck}/></button>{"   "}<button className="btn btn-md btn-danger" onClick={noClickHandler}><FontAwesomeIcon icon={faCircleXmark}/></button></h5>
+     <h5 className="py-4">Will you get runs on a wide ball? </h5>
+
+     <button className="btn btn-md btn-success" onClick={yesClickHandler}>YES{" "}<FontAwesomeIcon icon={faCircleCheck}/></button>{"   "}<button className="btn btn-md btn-danger" onClick={noClickHandler}>NO{" "}<FontAwesomeIcon icon={faCircleXmark}/></button>
      </>: <>
      
       <h3 className="py-4">Select what happened on current delivery</h3>
