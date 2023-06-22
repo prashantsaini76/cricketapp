@@ -82,14 +82,14 @@ const Score = (props) => {
             {" "}
             <FontAwesomeIcon icon={faBroom} />
           </button>{" "}
-          Clear Score Board{" "}
+          Clear Score {" "}
           <button
             className="btn btn-sm btn-primary  text-white"
             onClick={editScoreHandler} >
             {" "}
             <FontAwesomeIcon icon={faPenToSquare} />
           </button>{" "}
-          Edit Score Board
+          Edit Score
         </p>
       </h1>
       <div className="bg-warning p-2 border border-dark rounded-1 justify-content-left d-inline-flex">

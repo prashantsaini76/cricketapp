@@ -9,7 +9,7 @@ const Footer = () => {
   return (
    <>
    
-   <div class="d-flex bg-dark rounded-4  py-4 justify-content-center align-items-center myfooter">
+   <div class="d-flex bg-dark rounded-4 mt-3 mb-0 py-4 justify-content-center align-items-baseline flex-wrap-reverse myfooter">
  
  
    
