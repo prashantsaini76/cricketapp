@@ -19,17 +19,7 @@ const Score = (props) => {
     
   };
 
-  const runEditHandler = () => {
-    props.runEdit();
-  };
-
-  const oversEditHandler = () => {
-    props.oversEdit();
-  };
-
-  const wicketEditHandler = () => {
-    props.wicketEdit();
-  };
+ 
 
   const runtextHandler = (e) => {
     props.runText(e.target.value);
@@ -52,11 +42,6 @@ const Score = (props) => {
   };
 
   
-
-  const CancelEditHandler = () =>{
-    props.CancelEdit();
-  }
-
   const undoHandler = () => {
     props.undo();
   };
