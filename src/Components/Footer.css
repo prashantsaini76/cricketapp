@@ -8,4 +8,5 @@
 .myfooter {
   position: sticky;
   top: 100%;
+  border: 1px solid white;
 }
