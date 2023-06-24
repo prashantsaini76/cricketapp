@@ -83,7 +83,7 @@ const Score = (props) => {
               <div className=" timeline  d-inline-flex">
                 {" "}
                 <p>
-                  {"Bowler Timeline |"} {props.timelineVal}
+                  {"Timeline |"} {props.timelineVal}
                 </p>
               </div>
 
