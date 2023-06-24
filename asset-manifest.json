@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cricketapp/static/css/main.1639f175.css",
-    "main.js": "/cricketapp/static/js/main.19ef6be7.js",
+    "main.css": "/cricketapp/static/css/main.ea53a618.css",
+    "main.js": "/cricketapp/static/js/main.775bb9d3.js",
     "static/media/logo.jpg": "/cricketapp/static/media/logo.bd87585e0e34139efd8a.jpg",
     "static/media/bg.jpg": "/cricketapp/static/media/bg.f80d7f66091cd44999ea.jpg",
     "index.html": "/cricketapp/index.html",
-    "main.1639f175.css.map": "/cricketapp/static/css/main.1639f175.css.map",
-    "main.19ef6be7.js.map": "/cricketapp/static/js/main.19ef6be7.js.map"
+    "main.ea53a618.css.map": "/cricketapp/static/css/main.ea53a618.css.map",
+    "main.775bb9d3.js.map": "/cricketapp/static/js/main.775bb9d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.1639f175.css",
-    "static/js/main.19ef6be7.js"
+    "static/css/main.ea53a618.css",
+    "static/js/main.775bb9d3.js"
   ]
 }
