@@ -46,7 +46,7 @@ const Score = (props) => {
         <>
           <h1 className="text-center myText">
             Score Board{" "}
-            <p className="my-4 mb-4">
+            <p className="my-4 mb-4 mytxtButton">
               {" "}
               <button
                 className="btn btn-sm btn-success text-white"
@@ -66,7 +66,7 @@ const Score = (props) => {
               Edit Score
             </p>
           </h1>
-          <div className="bg-warning p-2 border border-dark rounded-1 justify-content-left d-inline-flex">
+          <div className="timeline d-inline-flex">
             {" "}
             <p>
               Score {props.runs}
@@ -80,7 +80,7 @@ const Score = (props) => {
           </div>{" "}
           {props.timelineVal !== "" ? (
             <>
-              <div className="bg-info p-2 mt-2 rounded-1 border border-dark text-white justify-content-left d-inline-flex">
+              <div className=" timeline  d-inline-flex">
                 {" "}
                 <p>
                   {"Bowler Timeline |"} {props.timelineVal}

@@ -1,8 +1,4 @@
-p {
-  font-family: "Exo 2", sans-serif;
 
-  font-size: 20px;
-}
 
 .myflex {
   background-color: black;
@@ -14,9 +10,31 @@ p {
   font-weight: 100;
 }
 
+.mytxtButton {
+  font-family: "Macondo", cursive;
+  font-size: 20px;
+  font-weight: 100;
+}
+
 .myTextChild {
   font-family: "Macondo", cursive;
   font-size: 20px;
   font-weight: 100;
   width: 300px;
+}
+
+.timeline{
+
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #40005d;
+  border: 1px solid white;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 12px;
+  margin-top: 10px;
 }

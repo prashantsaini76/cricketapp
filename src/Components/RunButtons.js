@@ -6,6 +6,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleXmark,
   faCircleCheck,
+  fa0,
+  fa1,
+  fa2,
+  fa3,
+  fa4,
+  fa6,
+  faW,
+  faI,
+  faD,
+  faE
+  
+  
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "./Footer";
 
@@ -120,22 +132,22 @@ const RunButtons = (props) => {
           <h5 className="py-4">Will you get runs on a wide ball? </h5>
 
           <button className="btn btn-md btn-success" onClick={yesClickHandler}>
-            YES <FontAwesomeIcon icon={faCircleCheck} />
+            YES <FontAwesomeIcon shake icon={faCircleCheck} />
           </button>
           {"   "}
           <button className="btn btn-md btn-danger" onClick={noClickHandler}>
-            NO <FontAwesomeIcon icon={faCircleXmark} />
+            NO <FontAwesomeIcon shake icon={faCircleXmark} />
           </button>
         </>
       ) : (
         <>
           <h3 className="py-4">Select what happened on current delivery</h3>
-          <div className="d-inline-flex flex-wrap p-3 gap-2 justify-content-center bg-dark rounded-5">
+          <div className="d-inline-flex flex-wrap p-3 gap-2 justify-content-center bg-dark rounded-5 timeline">
             <button
               className="btn btn-sm btn-success rounded-pill"
               onClick={click0Handler}
             >
-              0
+               <FontAwesomeIcon  size="1xl" icon={fa0} />
             </button>
             <button
               className="btn btn-sm btn-success rounded-pill"
@@ -143,121 +155,121 @@ const RunButtons = (props) => {
                 click1Handler();
               }}
             >
-              1
+              <FontAwesomeIcon  size="1xl" icon={fa1} />
             </button>
             <button
               className="btn btn-sm btn-success rounded-pill"
               onClick={click2Handler}
             >
-              2
+              <FontAwesomeIcon  size="1xl" icon={fa2} />
             </button>
             <button
               className="btn btn-sm btn-success rounded-pill"
               onClick={click3Handler}
             >
-              3
+             <FontAwesomeIcon  size="1xl" icon={fa3} />
             </button>
             <button
               className="btn btn-sm btn-success rounded-pill"
               onClick={click4Handler}
             >
-              4
+              <FontAwesomeIcon  size="1xl" icon={fa4} />
             </button>
             <button
               className="btn btn-sm btn-success rounded-pill"
               onClick={click6Handler}
             >
-              6
+              <FontAwesomeIcon  size="1xl" icon={fa6} />
             </button>
             <button
               className="btn btn-sm btn-warning rounded-pill"
               onClick={clickNB0Handler}
             >
-              NB+0
+              NB <FontAwesomeIcon fade size="1xl" icon={fa0} />
             </button>
             <button
               className="btn btn-sm btn-warning rounded-pill"
               onClick={clickNB1Handler}
             >
-              NB+1
+              NB <FontAwesomeIcon fade size="1xl" icon={fa1} />
             </button>
             <button
               className="btn btn-sm btn-warning rounded-pill"
               onClick={clickNB2Handler}
             >
-              NB+2
+              NB <FontAwesomeIcon fade size="1xl" icon={fa2} />
             </button>
             <button
               className="btn btn-sm btn-warning rounded-pill"
               onClick={clickNB3Handler}
             >
-              NB+3
+              NB <FontAwesomeIcon fade size="1xl" icon={fa3} />
             </button>
             <button
               className="btn btn-sm btn-warning rounded-pill"
               onClick={clickNB4Handler}
             >
-              NB+4
+              NB <FontAwesomeIcon fade size="1xl" icon={fa4} />
             </button>
             <button
               className="btn btn-sm btn-warning rounded-pill"
               onClick={clickNB6Handler}
             >
-              NB+6
+              NB <FontAwesomeIcon fade size="1xl" icon={fa6} />
             </button>
             <button
               className="btn btn-sm btn-primary rounded-pill"
               onClick={clickWDHandler}
             >
-              WIDE
+             <FontAwesomeIcon  size="1xl" icon={faW} /> <FontAwesomeIcon beat  size="1xl" icon={faI} /> <FontAwesomeIcon  size="1xl" beat icon={faD} /> <FontAwesomeIcon size="1xl" icon={faE} />
             </button>
             <button
               className="btn btn-sm btn-danger rounded-pill"
               onClick={clickout0Handler}
             >
-              OUT+0
+              OUT <FontAwesomeIcon fade size="1xl" beat icon={fa0} />
             </button>
             <button
               className="btn btn-sm btn-danger rounded-pill"
               onClick={clickout1Handler}
             >
-              OUT+1
+              OUT <FontAwesomeIcon fade size="1xl" beat icon={fa1} />
             </button>
             <button
               className="btn btn-sm btn-danger rounded-pill"
               onClick={clickout2Handler}
             >
-              OUT+2
+              OUT <FontAwesomeIcon fade size="1xl" beat icon={fa2} />
             </button>
             <button
               className="btn btn-sm btn-danger rounded-pill"
               onClick={clickout3Handler}
             >
-              OUT+3
+              OUT <FontAwesomeIcon fade size="1xl" beat icon={fa3} />
             </button>
             <button
               className="btn btn-sm btn-danger rounded-pill"
               onClick={clickNBrunout0Handler}
             >
-              NB+RUNOUT+0
+              NB+RUNOUT <FontAwesomeIcon fade size="1xl" beat icon={fa0} />
             </button>
             <button
               className="btn btn-sm btn-danger rounded-pill"
               onClick={clickNBrunout1Handler}
             >
-              NB+RUNOUT+1
+              NB+RUNOUT <FontAwesomeIcon fade size="1xl" beat icon={fa1} />
             </button>
             <button
               className="btn btn-sm btn-danger rounded-pill"
               onClick={clickNBrunout2Handler}
             >
-              NB+RUNOUT+2
+              NB+RUNOUT <FontAwesomeIcon fade size="1xl" beat icon={fa2} />
             </button>
             <button
               className="btn btn-sm btn-danger rounded-pill "
               onClick={clickNBrunout3Handler}
             >
-              NB+RUNOUT+3
+              NB+RUNOUT <FontAwesomeIcon fade size="1xl" beat icon={fa3} />
             </button>
           </div>
           <hr className="py-3" />
